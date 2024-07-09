@@ -1,0 +1,12 @@
+@model StreamApp.Models.Video
+
+<h1>Delete Video</h1>
+
+<p>Are you sure you want to delete this video: @Model.Title</p>
+
+<form method="post" action="/Video/Destroy">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="submit" value="Delete" />
+</form>
+
+<a href="@Url.Action("Index")">Back to List</a>

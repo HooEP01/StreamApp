@@ -1,0 +1,21 @@
+@model StreamApp.Models.Video
+
+<h1>Create New Video</h1>
+
+<form method="post" action="/Video/Store">
+    <div>
+        <label for="Id">Id:</label>
+        <input type="text" id="Id" name="Id" />
+    </div>
+    <div>
+        <label for="Title">Title:</label>
+        <input type="text" id="Title" name="Title" />
+    </div>
+    <div>
+        <label for="VideoUrl">Video URL:</label>
+        <input type="text" id="VideoUrl" name="VideoUrl" />
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+</form>

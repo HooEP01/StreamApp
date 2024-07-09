@@ -1,0 +1,27 @@
+<h1>Videos</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Created At</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var video in Model)
+    {
+        <tr>
+            <td>@video.Id</td>
+            <td>@video.Title</td>
+            <td>@video.VideoUrl</td>
+            <td>@video.CreatedAt</td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = video.Id })">Edit</a> |
+                <a href="@Url.Action("Show", new { id = video.Id })">Details</a> |
+                <a href="@Url.Action("Delete", new { id = video.Id })">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="@Url.Action("Create")">Create New Video</a>

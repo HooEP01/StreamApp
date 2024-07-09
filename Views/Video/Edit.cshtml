@@ -1,0 +1,19 @@
+@model StreamApp.Models.Video
+
+<h1>Edit Video: @Model.Id</h1>
+
+<form method="post" action="/Video/Update">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <div>
+        <label for="Title">Title:</label>
+        <input type="text" id="Title" name="Title" value="@Model.Title" />
+    </div>
+    <div>
+        <label for="VideoUrl">Video URL:</label>
+        <input type="text" id="VideoUrl" name="VideoUrl" value="@Model.VideoUrl" />
+    </div>
+    <div>
+        <input type="submit" value="Update" />
+    </div>
+</form>
